@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Question</title>
+</head>
+<body>
+
+
+
+
+
+
+<p th:text="${bodyTables.getTitle()}">VALUE</p>
+<p th:text="${bodyTables.getBody()}">VALUE</p>
+<p th:text="${bodyTables.getTags()}">VALUE</p>
+<p th:text="${bodyTables.getPostTypeId()}">VALUE</p>
+<p th:text="${bodyTables.getAcceptedAnswerId()}">VALUE</p>
+<p th:text="${bodyTables.getCreationDate()}">VALUE</p>
+<p th:text="${bodyTables.getScore()}">VALUE</p>
+<p th:text="${bodyTables.getViewCount()}">VALUE</p>
+<p th:text="${bodyTables.getOwnerUserId()}">VALUE</p>
+<p th:text="${bodyTables.getLastEditorUserId()}">VALUE</p>
+<p th:text="${bodyTables.getLastEditorDisplayName()}">VALUE</p>
+<p th:text="${bodyTables.getLastEditDate()}">VALUE</p>
+<p th:text="${bodyTables.getLastActivityDate()}">VALUE</p>
+<p th:text="${bodyTables.getAnswerCount()}">VALUE</p>
+<p th:text="${bodyTables.getCommentCount()}">VALUE</p>
+
+<p th:text="${bodyTables.getFavoriteCount()}">VALUE</p>
+<p th:text="${bodyTables.getCommunityOwnedDate()}">VALUE</p>
+<p th:text="${bodyTables.getContentLicense()}">VALUE</p>
+<p th:text="${bodyTables.getOwnerDisplayName()}">VALUE</p>
+<p th:text="${bodyTables.getClosedDate()}">VALUE</p>
+<p th:text="${bodyTables.getParentId()}">VALUE</p>
+
+<a th:href="@{/table/{id}/edit(id=${bodyTables.getId()})}"> Edit</a>
+
+<form th:method="DELETE" th:action="@{/table/{id}(id=${bodyTables.getId()})}">
+  <input type="submit" value="Delete">
+</form>
+
+
+</body>
+</html>

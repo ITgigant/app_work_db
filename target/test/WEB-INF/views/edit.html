@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Update person</title>
+</head>
+<body>
+
+
+<form th:method="PATCH" th:action="@{/table/{id}(id=${bodyTables.getId()})}" th:object="${bodyTables}">
+
+  <p><label for="title">Enter title:</label>
+  <div class="form-group">
+    <textarea class="form-control" id="title" rows="3" type="text" th:field="*{title}"></textarea>
+  </div></p>
+
+  <p><label for="body">Enter body:</label>
+  <div class="form-group">
+    <textarea class="form-control" id="body" rows="3" type="body" th:field="*{body}"></textarea>
+  </div></p>
+
+
+<!--  <p> <label for="title">Enter title: </label>-->
+<!--  <input type="text" th:field="*{title}" id="title"/>-->
+<!--  <div style="color:red" th:if = "${#fields.hasErrors('title')}" th:errors = "*{title}">Title error</div></p>-->
+<!--  <p><label for="body">Enter body: </label>-->
+<!--  <input type="text" th:field="*{body}" id="body"/>-->
+<!--  <div style="color:red" th:if = "${#fields.hasErrors('body')}" th:errors = "*{body}">Body error</div></p>-->
+  <p><label for="tags">Enter tags: </label>
+  <input type="text" th:field="*{tags}" id="tags"/>
+  <div style="color:red" th:if = "${#fields.hasErrors('tags')}" th:errors = "*{tags}">Tags error</div></p>
+  <p><label for="postTypeId">Enter postTypeId: </label>
+  <input type="text" th:field="*{postTypeId}" id="postTypeId"/></p>
+
+
+  <p><label for="acceptedAnswerId">Enter acceptedAnswerId: </label>
+    <input type="text" th:field="*{acceptedAnswerId}" id="acceptedAnswerId"/></p>
+
+
+  <p>
+    <i class="card-text"> CreationDate: </i>
+    <i class="card-text" id="CreationDate" th:text="${bodyTables.getCreationDate()}" ></i>
+  </p>
+
+
+  <p><label for="score">Enter score: </label>
+    <input type="text" th:field="*{score}" id="score"/></p>
+  <p><label for="viewCount">Enter viewCount: </label>
+    <input type="text" th:field="*{viewCount}" id="viewCount"/></p>
+  <p><label for="ownerUserId">Enter ownerUserId: </label>
+    <input type="text" th:field="*{ownerUserId}" id="ownerUserId"/></p>
+
+
+  <p><label for="lastEditorUserId">Enter lastEditorUserId: </label>
+    <input type="text" th:field="*{lastEditorUserId}" id="lastEditorUserId"/></p>
+  <p><label for="lastEditorDisplayName">Enter lastEditorDisplayName: </label>
+    <input type="text" th:field="*{lastEditorDisplayName}" id="lastEditorDisplayName"/></p>
+
+
+  <p>
+    <i class="card-text"> LastEditDate: </i>
+    <i class="card-text" id="LastEditDate" th:text="${bodyTables.getLastEditDate()}" ></i>
+  </p>
+
+  <p>
+    <i class="card-text"> LastActivityDate: </i>
+    <i class="card-text" id="LastActivityDate" th:text="${bodyTables.getLastActivityDate()}" ></i>
+  </p>
+
+  <p><label for="answerCount">Enter answerCount: </label>
+    <input type="text" th:field="*{answerCount}" id="answerCount"/></p>
+  <p><label for="commentCount">Enter commentCount: </label>
+    <input type="text" th:field="*{commentCount}" id="commentCount"/></p>
+
+
+  <p><label for="favoriteCount">Enter favoriteCount: </label>
+    <input type="text" th:field="*{favoriteCount}" id="favoriteCount"/></p>
+
+  <p>
+  <i class="card-text"> CommunityOwnedDate: </i>
+  <i class="card-text" id="CommunityOwnedDate" th:text="${bodyTables.getCommunityOwnedDate()}" ></i>
+  </p>
+
+  <p><label for="contentLicense">Enter contentLicense: </label>
+    <input type="text" th:field="*{contentLicense}" id="contentLicense"/></p>
+
+
+  <p><label for="ownerDisplayName">Enter ownerDisplayName: </label>
+    <input type="text" th:field="*{ownerDisplayName}" id="ownerDisplayName"/></p>
+
+
+  <p>
+  <i class="card-text"> ClosedDate: </i>
+  <i class="card-text" id="ClosedDate" th:text="${bodyTables.getClosedDate()}" ></i>
+  </p>
+
+
+  <p><label for="parentId">Enter parentId: </label>
+    <input type="text" th:field="*{parentId}" id="parentId"/></p>
+
+
+  <br/>
+  <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>

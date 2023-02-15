@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: IntelliJ IDEA
+Built-By: Матвей
+Build-Jdk: Oracle OpenJDK version 18.0.2
+Implementation-Title: test Maven Webapp
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: ru.chernyshovms
+Main-Class: ${start-class}
+
